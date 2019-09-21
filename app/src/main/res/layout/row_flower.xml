@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/flowerImage"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/flower" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/flowerImage"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/flowerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp" />
+
+        <RatingBar
+            android:id="@+id/flowerRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/flowerDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/showMoreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show More" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/flowerDetailDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/flowerImage"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>
